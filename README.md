@@ -1,4 +1,17 @@
-移除了下载安装限制，但是尚未申请到PCL_MS_CLIENT_ID和PCL_CURSEFORGE_API_KEY。当前不能完整使用。
+移除了下载安装限制，但是尚未申请到`PCL_MS_CLIENT_ID`和`PCL_CURSEFORGE_API_KEY`。当前不能完整使用。
+
+|API-Key|申请方法|
+|  ----  | ----  |
+|  `CURSEFORGE_API_KEY`   | https://support.curseforge.com/support/solutions/articles/9000208346-about-the-curseforge-api-and-how-to-apply-for-a-key  |
+|`MS_CLIENT_ID`|https://xphost008.github.io/lmaml/SecondChapter/OAuthLogin.html|
+
+https://portal.azure.cn/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
+
+
+申请完成后，设置`CURSEFORGE_API_KEY`和`MS_CLIENT_ID`就可以正常使用本仓库提供的构建版本。
+
+[![Stars](https://img.shields.io/github/stars/Na2Cr2O7/PCL-Download-Fix?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTggLjI1YS43NS43NSAwIDAgMSAuNjczLjQxOGwxLjg4MiAzLjgxNSA0LjIxLjYxMmEuNzUuNzUgMCAwIDEgLjQxNiAxLjI3OWwtMy4wNDYgMi45Ny43MTkgNC4xOTJhLjc1MS43NTEgMCAwIDEtMS4wODguNzkxTDggMTIuMzQ3bC0zLjc2NiAxLjk4YS43NS43NSAwIDAgMS0xLjA4OC0uNzlsLjcyLTQuMTk0TC44MTggNi4zNzRhLjc1Ljc1IDAgMCAxIC40MTYtMS4yOGw0LjIxLS42MTFMNy4zMjcuNjY4QS43NS43NSAwIDAgMSA4IC4yNVoiIGZpbGw9IiNlYWM1NGYiLz48L3N2Zz4=&logoSize=auto&label=Stars&labelColor=444444&color=eac54f)](https://github.com/Meloong-Git/PCL/)
+[![Issues](https://img.shields.io/github/issues/Na2Cr2O7/PCL-Download-Fix?style=flat&label=Issues&labelColor=444444&color=1F883D)](https://github.com/Meloong-Git/PCL/issues)
 
 以下是旧的readme。
 

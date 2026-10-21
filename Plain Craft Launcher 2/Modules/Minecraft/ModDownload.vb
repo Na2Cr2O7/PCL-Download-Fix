@@ -1304,13 +1304,13 @@ Public Module ModDownload
     'Mod 下载源
     Public Function DlSourceModGet(Original As String) As String
         Return Original.
-            Replace("api.modrinth.com", "mod.mcimirror.top/modrinth").
-            Replace("staging-api.modrinth.com", "mod.mcimirror.top/modrinth").
-            Replace("cdn.modrinth.com", "mod.mcimirror.top").
-            Replace("api.curseforge.com", "mod.mcimirror.top/curseforge").
-            Replace("edge.forgecdn.net", "mod.mcimirror.top").
-            Replace("mediafilez.forgecdn.net", "mod.mcimirror.top").
-            Replace("media.forgecdn.net", "mod.mcimirror.top")
+                Replace("api.modrinth.com", "mod.mcimirror.top/modrinth").
+                Replace("staging-api.modrinth.com", "mod.mcimirror.top/modrinth").
+                Replace("cdn.modrinth.com", "mod.mcimirror.top").
+                Replace("api.curseforge.com", "mod.mcimirror.top/curseforge").
+                Replace("edge.forgecdn.net", "mod.mcimirror.top").
+                Replace("mediafilez.forgecdn.net", "mod.mcimirror.top").
+                Replace("media.forgecdn.net", "mod.mcimirror.top")
     End Function
 
     'Loader 自动切换
