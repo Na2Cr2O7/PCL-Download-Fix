@@ -446,10 +446,22 @@ Public Class FormMain
             Telemetry("启动")
             '开源版本提示
             If VersionBranchMain = "OpenSource" Then
-                MyMsgBox($"该版本中无法使用以下特性：{vbCrLf}- CurseForge API 调用：需要自行申请 API Key，然后添加到 ModSecret.vb 的开头{vbCrLf}- 正版登录：需要自行向微软申请 Client ID，然后添加到 ModSecret.vb 的开头{vbCrLf}- 更新与联网通知：避免滥用隐患{vbCrLf}- 主题切换：这是需要赞助解锁的纪念性质的功能，别让赞助者太伤心啦……{vbCrLf}- 百宝箱：开发早期往里面塞了些开发工具，整理起来太麻烦了……", "开源版本说明")
+                MyMsgBox($"该版本中无法使用以下特性：{vbCrLf}- CurseForge API 调用：需要设置环境变量PCL_CURSEFORGE_API_KEY{vbCrLf}- 正版登录：需要自行向微软申请 Client ID，然后设置环境变量PCL_MS_CLIENT_ID{vbCrLf}- 更新与联网通知：避免滥用隐患{vbCrLf}- 主题切换：这是需要赞助解锁的纪念性质的功能，别让赞助者太伤心啦……{vbCrLf}- 百宝箱：开发早期往里面塞了些开发工具，整理起来太麻烦了……", "开源版本说明")
             End If
         End Sub, "初始化", ThreadPriority.Lowest)
 
+
+        If (ModSecret.OAuthClientIdEnv) IsNot Nothing AndAlso ModSecret.OAuthClientIdEnv <> "" Then
+            MyMsgBox($"你已经在环境变量中设置了微软Client ID{vbCrLf}确保它可用", "Client ID提示")
+        ElseIf ModSecret.OAuthClientId = "" Then
+            Logger.Error($"微软Client ID不可用{vbCrLf}正版登录将无效", LogBehavior.Alert)
+
+        End If
+        If (ModSecret.CurseForgeAPIKeyEnv) IsNot Nothing AndAlso ModSecret.CurseForgeAPIKeyEnv <> "" Then
+            MyMsgBox($"你已经在环境变量中设置了CurseForge API Key{vbCrLf}确保它可用", "CurseForge API提示")
+        ElseIf ModSecret.CurseForgeAPIKey = "" Then
+            Logger.Error($"CurseForge API Key不可用{vbCrLf}CurseForge将无法使用", LogBehavior.Alert)
+        End If
         Logger.Info($"第三阶段加载用时：{GetTimeMs() - ApplicationStartTick} ms")
     End Sub
     '根据打开次数触发的事件
