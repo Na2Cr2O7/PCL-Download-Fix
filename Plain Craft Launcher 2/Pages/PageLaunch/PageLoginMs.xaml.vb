@@ -65,6 +65,10 @@ Public Class PageLoginMs
     End Function
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+        If ModSecret.OAuthClientId = "" Then
+            Logger.Error("微软Client ID 为空", LogBehavior.Alert)
+            Return
+        End If
         ComboAccounts.IsEnabled = False
         BtnLogin.IsEnabled = False
         BtnLogin.Text = "0%"
