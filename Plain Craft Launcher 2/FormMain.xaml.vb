@@ -460,7 +460,7 @@ Public Class FormMain
         If (ModSecret.CurseForgeAPIKeyEnv) IsNot Nothing AndAlso ModSecret.CurseForgeAPIKeyEnv <> "" Then
             MyMsgBox($"你已经在环境变量中设置了CurseForge API Key{vbCrLf}确保它可用", "CurseForge API提示")
         ElseIf ModSecret.CurseForgeAPIKey = "" Then
-            Logger.Error($"CurseForge API Key不可用{vbCrLf}CurseForge将无法使用", LogBehavior.Alert)
+            Logger.Warn($"CurseForge API Key不可用{vbCrLf}CurseForge可能将无法使用", LogBehavior.Alert)
         End If
         Logger.Info($"第三阶段加载用时：{GetTimeMs() - ApplicationStartTick} ms")
     End Sub
